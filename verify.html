@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verify a Certificate — Certified Products Registry | HCA</title>
+<meta name="description" content="Search the HCA registry of halal-certified products and companies in Nigeria. Check certificate numbers, status and expiry dates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Albert+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <div><a href="tel:+2348023519433">(+234) 802 351 9433</a> · <a href="mailto:info@halalcert.com.ng">info@halalcert.com.ng</a></div>
+    <div>Anthony, Lagos, Nigeria · <a href="verify.html">Verify a certificate →</a></div>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Halal Certification Authority home">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+        <rect x="22" y="22" width="56" height="56" fill="none" stroke="#136A4A" stroke-width="5"/>
+        <rect x="22" y="22" width="56" height="56" fill="none" stroke="#C19A3D" stroke-width="5" transform="rotate(45 50 50)"/>
+        <circle cx="50" cy="50" r="9" fill="#0B3B2C"/>
+      </svg>
+      <span class="name">Halal Certification Authority<small>Nigeria · Est. Standards Body</small></span>
+    </a>
+    <button id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Menu">☰</button>
+    <nav class="main" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="certification.html">Certification</a>
+      <a href="verify.html" aria-current="page">Verify Registry</a>
+      <a href="training.html">Training</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="certification.html#apply">Apply now</a>
+    </nav>
+  </div>
+</header>
+<section class="page-hero">
+  <svg class="pattern" aria-hidden="true" width="100%" height="100%">
+    <defs>
+      <pattern id="stars" width="120" height="120" patternUnits="userSpaceOnUse">
+        <rect x="40" y="40" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.5"/>
+        <rect x="40" y="40" width="40" height="40" fill="none" stroke="#fff" stroke-width="1.5" transform="rotate(45 60 60)"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#stars)"/>
+  </svg>
+  <div class="wrap">
+    <p class="crumb"><a href="index.html">Home</a> / Verify Registry</p>
+    <h1>The certified products registry</h1>
+    <p>Search by company, product, or certificate number. Status is shown live — valid, renewal due, or expired — so a halal claim is never just a claim.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="registry-tools">
+      <input type="search" id="regSearch" placeholder="Search company, product, or certificate no." aria-label="Search registry">
+      <select id="regCategory" aria-label="Filter by category"><option value="">All categories</option></select>
+      <select id="regStatus" aria-label="Filter by status">
+        <option value="">All statuses</option>
+        <option value="valid">Valid</option>
+        <option value="renewal">Renewal due</option>
+        <option value="expired">Expired</option>
+      </select>
+    </div>
+    <p class="mono" id="regCount" style="font-size:.78rem;color:var(--ink-soft);margin-bottom:.7rem"></p>
+    <div class="table-wrap">
+      <table class="registry">
+        <thead>
+          <tr><th>Company / Certificate no.</th><th>Product</th><th>Category</th><th>Issued</th><th>Expires</th><th>Status</th></tr>
+        </thead>
+        <tbody id="registryBody"></tbody>
+      </table>
+    </div>
+    <p class="demo-note">⚠ Demonstration data. Companies and products are drawn from HCA's public certified list; certificate numbers, dates and statuses are illustrative until this registry is connected to HCA's live certification database. Each certificate would also carry a QR code on the product label linking directly to its registry entry.</p>
+  </div>
+</section>
+
+<section class="block tint">
+  <div class="wrap">
+    <div class="grid3">
+      <div class="card"><h3>Check the label</h3><p>Every HCA-certified product carries a certificate number. Search it here to confirm the certificate is current.</p></div>
+      <div class="card"><h3>Status, live</h3><p>Valid, renewal due, or expired — status is computed from the certificate's dates, not a static page that goes stale.</p></div>
+      <div class="card"><h3>See something off?</h3><p>If a product claims halal certification you can't verify here, <a href="contact.html">report it to our compliance team</a>.</p></div>
+    </div>
+  </div>
+</section>
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <div class="brandline">
+        <svg class="star" viewBox="0 0 100 100" width="22" height="22"><rect x="22" y="22" width="56" height="56" fill="none" stroke="#C19A3D" stroke-width="6"/><rect x="22" y="22" width="56" height="56" fill="none" stroke="#fff" stroke-width="6" transform="rotate(45 50 50)"/></svg>
+        Halal Certification Authority
+      </div>
+      <p>A faith-based products certification body developing halal standards and conducting inspections in accordance with Islamic Law (Shariah), accepted by domestic and foreign markets.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <a href="about.html">About HCA</a>
+      <a href="certification.html">Certification</a>
+      <a href="verify.html">Verify registry</a>
+      <a href="training.html">Training</a>
+    </div>
+    <div>
+      <h4>For business</h4>
+      <a href="certification.html#apply">Apply online</a>
+      <a href="certification.html#process">Audit process</a>
+      <a href="certification.html#renewal">Renewals</a>
+      <a href="contact.html">Request a quote</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="tel:+2348023519433">(+234) 802 351 9433</a>
+      <a href="tel:+2348037218855">(+234) 803 721 8855</a>
+      <a href="mailto:info@halalcert.com.ng">info@halalcert.com.ng</a>
+      <p style="margin-top:.5rem">9A, Wing 1, Abiodun Fasakin Crescent, Anthony, Lagos, Nigeria</p>
+    </div>
+  </div>
+  <div class="legal">
+    <div class="wrap">
+      <span>© <span data-year>2026</span> Halal Certification Authority. All rights reserved.</span>
+      <span>Redesign concept · Built by Nexum-sol</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
